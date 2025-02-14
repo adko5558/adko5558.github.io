@@ -15,3 +15,25 @@ html {
     background: radial-gradient(circle, Red, red 50%, Lightcyan 50%, Red);
     background-size: 64px 64px;
 }
+footer {
+    position: absolute;
+    bottom: 8px; /* Trochu od spodku */
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+a {
+    font-size: 2em; /* Zvýši veľkosť textu */
+    font-weight: bold; /* Tučné písmo */
+    text-decoration: none; /* Odstráni podčiarknutie */
+    margin-right: 20px; /* Medzera medzi odkazmi */
+    color: white; /* Farba textu (môžeš zmeniť) */
+}
+
+a:hover {
+    color: yellow; /* Zmena farby pri prechode myšou */
+}
+b1 {
+    font-size: 2em; /* Rovnaká veľkosť ako odkazy */
+    font-weight: bold; /* Tučné písmo */
+}

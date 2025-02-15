@@ -53,6 +53,99 @@
       </b1>
       <br>
       <br>
+      <button onclick="startMadness()" 
+      style="display: inline-block; 
+             background: red; 
+             color: white; 
+             font-size: 1em; 
+             font-weight: bold; 
+             text-decoration: none; 
+             padding: 10px 20px; 
+             border-radius: 8px; 
+             box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2); 
+             transition: all 0.2s ease-in-out; 
+             text-align: center;
+             border: 2px solid darkred;"
+      onmouseover="this.style.background='darkred'; this.style.color='black'; this.style.transform='scale(1.1)';" 
+      onmouseout="this.style.background='red'; this.style.color='white'; this.style.transform='scale(1)';">
+      DO NOT PRESS!!!
+   </button>
+   
+   <script>
+   function startMadness() { 
+       var c = document;
+       var a = c.body.style;
+       
+       c.documentElement.style.background = a.background = 'black';
+       a.color = 'yellow';
+       a.height = a.width = '100%';
+       a.position = 'fixed';
+       a.overflowY = 'scroll';
+       a.top = '-15%';
+       a.webkitTransform = a.MozTransform = a.transform = 'matrix3d(1,0,0,0,0,1,0,-0.0015,0,0,1,0,0,0,0,1)';
+       
+       for (var b = c.body.children, i = 0; i < b.length; i++) {
+           if (b[i].nodeName !== 'SCRIPT') {
+               b[i].style.overflowY = 'scroll';
+               b[i].style.maxHeight = '100%';
+           }
+       }
+   
+       // 🎵 Spustenie hudby (Star Wars Theme)
+       var audio = new Audio();
+       audio.src = 'https://archive.org/download/StarWarsThemeSongByJohnWilliams/Star Wars Theme Song By John Williams.mp3';
+       audio.load();
+       audio.play();
+   
+       // 📜 Posúvanie stránky nekonečne dole
+       var scrollEffect = function() {
+           for (var el, i = 0; el = c.body.children[i]; i++) {
+               if (el.nodeName !== 'SCRIPT') {
+                   el.scrollTop += 2;
+               }
+           }
+           setTimeout(scrollEffect, 50);
+       };
+       setTimeout(scrollEffect, 1000);
+   
+       // ✨ Blikajúci a pohybujúci sa text "WHAT HAVE YOU DONE???!!!"
+       let style = document.createElement('style'); 
+       style.innerHTML = ` 
+           @keyframes blink { 
+               0% { color: red; } 
+               50% { color: yellow; } 
+               100% { color: white; } 
+           } 
+           @keyframes move { 
+               0% { left: 0px; } 
+               50% { left: 20px; } 
+               100% { left: 0px; } 
+           } 
+           .crazy-text { 
+               font-size: 2em; 
+               font-weight: bold; 
+               text-align: center; 
+               animation: blink 0.5s infinite alternate, move 3s infinite linear; 
+               position: relative; 
+           } 
+       `; 
+       document.head.appendChild(style); 
+   
+       function addText() { 
+           for (let i = 0; i < 30; i++) { 
+               let p = document.createElement('p'); 
+               p.className = 'crazy-text'; 
+               p.textContent = 'WHAT HAVE YOU DONE???!!!'; 
+               document.body.appendChild(p); 
+           } 
+           setTimeout(addText, 100); 
+       } 
+       addText(); 
+   }
+   </script>
+   
+</a>
+
       <br>
       <br>
       <b>All Rights Reserved! ©2025 Dash.net by Adrián</b>

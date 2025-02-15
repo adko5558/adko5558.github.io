@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Save the old computers!</title>
+</head>
+<body>
+    <div style='background-color:dodgerblue; width:640px;'>
+        <canvas id="gameCanvas" width="640" height="480"></canvas>
+    </div>
+    <div style="display: none;">
+        <img id='apple' src='https://64.media.tumblr.com/57f20140d7257892646429320fd2a011/2c91803c31aaa311-8e/s540x810/28650bc7bdb72ee8c06905a88c9e333bed3c3a64.png'>
+        <img id='monster' src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/04174dbc-fe2f-4983-824a-6d80412e917e/dg46rr2-60fc8c9b-deb7-462d-be31-c2a0c43a15a7.png/v1/fill/w_670,h_694/windows_xp_pose__bfdi___male___2_by_xxneojadenxx_dg46rr2-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Njk0IiwicGF0aCI6IlwvZlwvMDQxNzRkYmMtZmUyZi00OTgzLTgyNGEtNmQ4MDQxMmU5MTdlXC9kZzQ2cnIyLTYwZmM4YzliLWRlYjctNDYyZC1iZTMxLWMyYTBjNDNhMTVhNy5wbmciLCJ3aWR0aCI6Ijw9NjcwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.FfqM9IwNrisd-YbN57gMki4B_nWn2qLfl1QTf-4ErtU'>
+    </div>
+    <script>
+        var gameCanvas = document.getElementById("gameCanvas");
+        var ctx = gameCanvas.getContext("2d");
+        var x = 300, y = 50, monsterX = 300, changeX = 0, score = 0;
+        var apple = document.getElementById("apple");
+        var monster = document.getElementById("monster");
+        var gameTimer = setInterval(mainLoop, 20);
+        
+        function mainLoop() {
+            ctx.clearRect(0, 0, 640, 480);
+            ctx.font = "30px Arial";
+            ctx.fillText("Computers saved: " + score, 10, 30);
+            ctx.drawImage(apple, x, y, 80, 80);
+            y += 3;
+            if (y > 480) { y = -80; x = Math.random() * 600; }
+            ctx.drawImage(monster, monsterX, 400, 80, 80);
+            monsterX += changeX;
+            checkForHits();
+        }
+        
+        document.onkeydown = keyPressed;
+        function keyPressed(e) {
+            var k = e.keyCode;
+            if (k == 37) { changeX = -5; }
+            if (k == 39) { changeX = 5; }
+        }
+        
+        function checkForHits() {
+            if ((Math.abs(400 - y) < 60) && (Math.abs(monsterX - x) < 60)) {
+                score += 1;
+                y = -80; x = Math.random() * 600;
+            }
+        }
+        
+        setTimeout(gameOver, 30000);
+        function gameOver() {
+            clearInterval(gameTimer);
+            ctx.font = "40px Arial";
+            ctx.fillText("Time is out! Thx for saving it!", 50, 250);
+        }
+        
+        function restartGame() {
+            location.reload();
+        }
+    </script>
+    
+    <h1>Save the old computers or ur comp die :D (and will be angry >:( so save them)</h1>
+    <button onclick="restartGame()" style="font-size: 20px; padding: 10px; margin-top: 10px;">Restart</button>
+</body>
+</html>

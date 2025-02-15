@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dash.net - About us</title>
     <link type="text/css" rel="stylesheet" href="./sablona-1.css"/>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/?size=512&id=0vJNjSJWpHy7&format=png">
 </head>
 <body>
     <a href="./index.html">Dash.net</a>
@@ -31,99 +32,103 @@
         <span style="color:#1CCBE2;">!</span>
       </span>
       <br>
-    <button onclick="startMadness()" 
-   style="display: inline-block; 
-          background: red; 
-          color: white; 
-          font-size: 1em; 
-          font-weight: bold; 
-          text-decoration: none; 
-          padding: 10px 20px; 
-          border-radius: 8px; 
-          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2); 
-          transition: all 0.2s ease-in-out; 
-          text-align: center;
-          border: 2px solid darkred;"
-   onmouseover="this.style.background='darkred'; this.style.color='black'; this.style.transform='scale(1.1)';" 
-   onmouseout="this.style.background='red'; this.style.color='white'; this.style.transform='scale(1)';">
-   DO NOT PRESS!!!
-</button>
-
-<script>
-function startMadness() { 
-    var c = document;
-    var a = c.body.style;
-    
-    c.documentElement.style.background = a.background = 'black';
-    a.color = 'yellow';
-    a.height = a.width = '100%';
-    a.position = 'fixed';
-    a.overflowY = 'scroll';
-    a.top = '-15%';
-    a.webkitTransform = a.MozTransform = a.transform = 'matrix3d(1,0,0,0,0,1,0,-0.0015,0,0,1,0,0,0,0,1)';
-    
-    for (var b = c.body.children, i = 0; i < b.length; i++) {
-        if (b[i].nodeName !== 'SCRIPT') {
-            b[i].style.overflowY = 'scroll';
-            b[i].style.maxHeight = '100%';
-        }
-    }
-
-    // 🎵 Spustenie hudby (Star Wars Theme)
-    var audio = new Audio();
-    audio.src = 'https://archive.org/download/StarWarsThemeSongByJohnWilliams/Star Wars Theme Song By John Williams.mp3';
-    audio.load();
-    audio.play();
-
-    // 📜 Posúvanie stránky nekonečne dole
-    var scrollEffect = function() {
-        for (var el, i = 0; el = c.body.children[i]; i++) {
-            if (el.nodeName !== 'SCRIPT') {
-                el.scrollTop += 2;
-            }
-        }
-        setTimeout(scrollEffect, 50);
-    };
-    setTimeout(scrollEffect, 1000);
-
-    // ✨ Blikajúci a pohybujúci sa text "WHAT HAVE YOU DONE???!!!"
-    let style = document.createElement('style'); 
-    style.innerHTML = ` 
-        @keyframes blink { 
-            0% { color: red; } 
-            50% { color: yellow; } 
-            100% { color: white; } 
-        } 
-        @keyframes move { 
-            0% { left: 0px; } 
-            50% { left: 20px; } 
-            100% { left: 0px; } 
-        } 
-        .crazy-text { 
-            font-size: 2em; 
-            font-weight: bold; 
-            text-align: center; 
-            animation: blink 0.5s infinite alternate, move 3s infinite linear; 
-            position: relative; 
-        } 
-    `; 
-    document.head.appendChild(style); 
-
-    function addText() { 
-        for (let i = 0; i < 30; i++) { 
-            let p = document.createElement('p'); 
-            p.className = 'crazy-text'; 
-            p.textContent = 'WHAT HAVE YOU DONE???!!!'; 
-            document.body.appendChild(p); 
-        } 
-        setTimeout(addText, 100); 
-    } 
-    addText(); 
-}
-</script>
-
+      <b1>
+        DO U KNOW WHERE WE LIVE??? HERE U ARE!!!!           (xd lol)
+      </b1>
+      <br>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.150199713885!2d-77.03910472376357!3d38.89768044668697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7bcdecbb1df%3A0x715969d86d0b76bf!2sBiely%20dom!5e0!3m2!1ssk!2ssk!4v1739641578237!5m2!1ssk!2ssk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <br>
       <br>
+     <button onclick="startMadness()" 
+      style="display: inline-block; 
+             background: red; 
+             color: white; 
+             font-size: 1em; 
+             font-weight: bold; 
+             text-decoration: none; 
+             padding: 10px 20px; 
+             border-radius: 8px; 
+             box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2); 
+             transition: all 0.2s ease-in-out; 
+             text-align: center;
+             border: 2px solid darkred;"
+      onmouseover="this.style.background='darkred'; this.style.color='black'; this.style.transform='scale(1.1)';" 
+      onmouseout="this.style.background='red'; this.style.color='white'; this.style.transform='scale(1)';">
+      DO NOT PRESS!!!
+   </button>
+   
+   <script>
+   function startMadness() { 
+       var c = document;
+       var a = c.body.style;
+       
+       c.documentElement.style.background = a.background = 'black';
+       a.color = 'yellow';
+       a.height = a.width = '100%';
+       a.position = 'fixed';
+       a.overflowY = 'scroll';
+       a.top = '-15%';
+       a.webkitTransform = a.MozTransform = a.transform = 'matrix3d(1,0,0,0,0,1,0,-0.0015,0,0,1,0,0,0,0,1)';
+       
+       for (var b = c.body.children, i = 0; i < b.length; i++) {
+           if (b[i].nodeName !== 'SCRIPT') {
+               b[i].style.overflowY = 'scroll';
+               b[i].style.maxHeight = '100%';
+           }
+       }
+   
+       // 🎵 Spustenie hudby (Star Wars Theme)
+       var audio = new Audio();
+       audio.src = 'https://archive.org/download/StarWarsThemeSongByJohnWilliams/Star Wars Theme Song By John Williams.mp3';
+       audio.load();
+       audio.play();
+   
+       // 📜 Posúvanie stránky nekonečne dole
+       var scrollEffect = function() {
+           for (var el, i = 0; el = c.body.children[i]; i++) {
+               if (el.nodeName !== 'SCRIPT') {
+                   el.scrollTop += 2;
+               }
+           }
+           setTimeout(scrollEffect, 50);
+       };
+       setTimeout(scrollEffect, 1000);
+   
+       // ✨ Blikajúci a pohybujúci sa text "WHAT HAVE YOU DONE???!!!"
+       let style = document.createElement('style'); 
+       style.innerHTML = ` 
+           @keyframes blink { 
+               0% { color: red; } 
+               50% { color: yellow; } 
+               100% { color: white; } 
+           } 
+           @keyframes move { 
+               0% { left: 0px; } 
+               50% { left: 20px; } 
+               100% { left: 0px; } 
+           } 
+           .crazy-text { 
+               font-size: 2em; 
+               font-weight: bold; 
+               text-align: center; 
+               animation: blink 0.5s infinite alternate, move 3s infinite linear; 
+               position: relative; 
+           } 
+       `; 
+       document.head.appendChild(style); 
+   
+       function addText() { 
+           for (let i = 0; i < 30; i++) { 
+               let p = document.createElement('p'); 
+               p.className = 'crazy-text'; 
+               p.textContent = 'WHAT HAVE YOU DONE???!!!'; 
+               document.body.appendChild(p); 
+           } 
+           setTimeout(addText, 100); 
+       } 
+       addText(); 
+   }
+   </script>
       <br>
       <b>All Rights Reserved! ©2025 Dash.net by Adrián</b>
 </body>

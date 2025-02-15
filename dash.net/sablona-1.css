@@ -31,7 +31,7 @@ a {
 }
 
 a:hover {
-    color: yellow;
+    color: rgb(255, 123, 123);
 }
 b1 {
     font-size: 2em;

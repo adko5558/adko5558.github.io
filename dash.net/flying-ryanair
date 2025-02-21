@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash.net - Flying Jet</title>
+    <style>
+        div {
+            width: 640px;
+            height: 480px;
+            background: url('https://adko5558.github.io/dash.net/cloud-bg.jpg');
+        }
+        img {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <canvas id="gameCanvas" width="640" height="480"></canvas>
+    </div>
+
+    <img id='fish' src='https://adko5558.github.io/dash.net/ryanair.png'>
+    <img id='pipes' src='https://maxw.uk/graphics/legacy_downloads/pipes.png'>
+
+    <script>
+        var gameCanvas = document.getElementById("gameCanvas");
+        var ctx = gameCanvas.getContext("2d");
+        var x = 640, y = -160, fishY = 220, ySpeed = 0, score = 0;
+        var fish = new Image();
+        var pipes = new Image();
+
+        fish.src = "https://adko5558.github.io/dash.net/ryanair.png";
+        pipes.src = "https://maxw.uk/graphics/legacy_downloads/pipes.png";
+
+        var imagesLoaded = 0;
+
+        function imageLoaded() {
+            imagesLoaded++;
+            if (imagesLoaded === 2) {
+                startGame();
+            }
+        }
+
+        fish.onload = imageLoaded;
+        pipes.onload = imageLoaded;
+
+        function startGame() {
+            setInterval(mainLoop, 10);
+        }
+
+        function mainLoop() {
+            ctx.clearRect(0, 0, 640, 480);
+            ctx.drawImage(pipes, x, y, 80, 800);
+            x += -2;
+            checkHitPipe();
+            if (x < -80) {
+                x = 640;
+                y = Math.random() * -320;
+                score++;
+            }
+            ctx.drawImage(fish,10,fishY, 200,90);
+            ctx.font = "30px Arial";
+            ctx.fillText("Km flown: " + score, 10, 30);
+            ySpeed += 0.02;
+            fishY += ySpeed;
+        }
+
+        document.onkeydown = function () {
+            ySpeed = -2;
+        };
+
+        function checkHitPipe() {
+            if (x < 70) {
+                if ((fishY - y < 270) || (fishY - y > 450)) {
+                    clearInterval(mainLoop);
+                    ctx.font = "80px Arial";
+                    ctx.fillText("you crushed!", 100, 250);
+                    ctx.fillText("Be carefull,", 100, 165);
+                }
+            }
+        }
+    </script>
+
+</body>
+<b1>  
+    Flying Ryanair! Recommended size is 220% on pc (mobille version isn't ready)
+</b1>
+</html>
 

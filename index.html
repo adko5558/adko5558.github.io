@@ -1,1 +1,46 @@
-<meta http-equiv="refresh" content="0; url=https://adko5558.github.io/dash.net/" />
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nočná Chodba</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-container">
+    <h1>Nočná Chodba (In development!)</h1>
+    <div id="name-input">
+      <label for="player-name">Zadaj svoje meno:</label><br />
+      <input type="text" id="player-name" placeholder="Tvoje meno" />
+      <button id="start-btn" onclick="startGame()">Hrať!</button>
+    </div>
+    <div id="scene-text" style="display: none;"></div>
+    <div id="choices" style="display: none;"></div>
+  </div>
+
+  <div id="location-box">Lokácia: ?</div>
+
+  <script src="main.js"></script>
+
+  <!-- Help Icon -->
+<div id="help-icon" onclick="toggleHelp()">
+  <img src="https://64.media.tumblr.com/b89f9559300c18dbfc9514122aa9a8aa/995df7f1b9b55f5e-65/s540x810/e412dc3e5e375e84caefe78d10676aac799ab1bf.png" alt="Help" />
+</div>
+
+<!-- Help Popup -->
+<div id="help-popup">
+  <div class="help-content">
+    <span class="close-btn" onclick="toggleHelp()">×</span>
+    <h2>Pomoc</h2>
+    <p>Čo je toto za hru a ako sa hrá?</p>
+    <p>Táto hra sa volá Nočná Chodba, a celá sa odohráva v a okolí školy. Jedného krásneho dňa (alebo noci??) z nejakého neznámeho dôvodu si v nej ostal po zatváračke, a tak si to využil, a začal skúmať tie najväčšie tajomstvá celej školy!</p>
+    <br>
+    <p>História:</p>
+    <p>Základy hry sa vytvorili 2.5/25 a deň na to prvých pár scén.</p>
+    <img src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" alt="Girl in a jacket" width="500" height="600"> 
+  </div>
+</div>
+
+
+</body>
+</html>

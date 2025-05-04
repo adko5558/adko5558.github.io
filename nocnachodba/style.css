@@ -248,3 +248,13 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.help-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+  margin: 10px auto;
+  border-radius: 6px;
+}

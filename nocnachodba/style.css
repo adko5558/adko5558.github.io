@@ -166,3 +166,71 @@ h1 {
     background-color: rgba(13, 13, 26, 0.8);
   }
 }
+
+@media screen and (max-width: 600px) {
+  #game-container {
+    transform: scale(0.85);
+    transform-origin: top center;
+    margin: 0 auto;
+  }
+
+  #scene-text {
+    font-size: 15px;
+  }
+
+  #choices button,
+  #start-btn {
+    font-size: 15px;
+    padding: 9px;
+  }
+
+  #player-name {
+    font-size: 15px;
+    padding: 9px;
+  }
+
+  #location-box {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  #help-icon {
+    bottom: 14px;
+    right: 14px;
+    padding: 6px;
+  }
+
+  #help-icon img {
+    width: 60px;
+    height: 60px;
+  }
+
+  #help-popup .help-content {
+    width: 94%;
+    max-width: 280px;
+    padding: 12px;
+    font-size: 13px;
+    word-wrap: break-word;
+    line-height: 1.4;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  #help-popup .help-content h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  #help-popup .help-content p {
+    font-size: 13px;
+  }
+}
+
+.help-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+  border-radius: 6px;
+}
+

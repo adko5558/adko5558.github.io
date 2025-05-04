@@ -234,3 +234,17 @@ h1 {
   border-radius: 6px;
 }
 
+.help-content img {
+  max-width: 100%;
+  height: auto !important;
+  width: auto !important;
+  display: block;
+  margin: 10px 0;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

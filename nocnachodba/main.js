@@ -169,3 +169,22 @@ function toggleHelp() {
     popup.classList.add("show");
   }
 }
+
+function getCookie(name) {
+  const value = "; " + document.cookie;
+  const parts = value.split("; " + name + "=");
+  if (parts.length === 2) return parts.pop().split(";").shift();
+}
+
+function acceptCookies() {
+  const popup = document.getElementById("cookie-popup");
+  document.cookie = "cookieaccepted=true; path=/; max-age=31536000"; // 1 rok
+  popup.style.display = "none";
+}
+
+window.addEventListener("load", () => {
+  const accepted = getCookie("cookieaccepted");
+  if (accepted !== "true") {
+    document.getElementById("cookie-popup").style.display = "flex";
+  }
+});
